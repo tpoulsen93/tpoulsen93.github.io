@@ -10,7 +10,7 @@ solutions typically included rooms full of physical servers with one or more
 "System Administrators" working to manage them. These servers had to be
 manually configured with their hardware and software resources according to
 their job, whether they be managing the database system or the computing
-power or the development environments or any othe myriad other systems a
+power or the development environments or any other myriad systems a
 business might need. These systems were typically all or nothing. As soon as
 resources for one machine aren't enough, the system administrator would have to
 set up an entire new machine and then that machine would only be using a small
@@ -48,13 +48,15 @@ availability, and scalability for software systems.</p>
 
  <p>I would now like to hone in on one of the specific aspects of cloud computing
 that I learned about recently and found to be really amazing... Message Queues.
-Amazons AWS described Message Queues like this, "A message queue is a form of
-asynchronous service-to-service communication used in serverless and
-microservices architectures. Messages are stored on the queue until they are
-processed and deleted. Each message is processed only once, by a single
-consumer. Message queues can be used to decouple heavyweight processing, to
-buffer or batch work, and to smooth spiky workloads."</p>
- <h5> - https://aws.amazon.com/message-queue/</h5>
+Amazons AWS described Message Queues like this:</p>
+
+<p>"A message queue is a form of asynchronous service-to-service communication
+  used in serverless and microservices architectures. Messages are stored on
+  the queue until they are processed and deleted. Each message is processed
+  only once, by a single consumer. Message queues can be used to decouple
+  heavyweight processing, to buffer or batch work, and to smooth spiky
+workloads."</p>
+<h5> - https://aws.amazon.com/message-queue/</h5>
 
  <p>Message queue's allow for one of the best parts about cloud computing:
 Modularization. Breaking a big system down into a bunch of smaller systems,
@@ -63,9 +65,9 @@ to "develop, deploy, and maintain". This distribution of the work can lead to
 improved "performance, reliability, and scalability". They accomplish all of
 this by acting as a kind of middle man between different applications.</p>
 
- <p>A common pattern with online applications can be broken down into 4 seperate
+ <p>A common pattern with online applications can be broken down into 4 separate
 sections. Ingest, Persist, Process, Serve. Each of these sections could be
-seperated by a message queue.</p>
+separated by a message queue.</p>
 
  <p>The "Ingest" section could be described as the part that is outward facing to
 users. User interactions with the front facing system would be pushed onto a
@@ -82,7 +84,7 @@ solution.</p>
  <p>The next system in the line is "Processing". Processing, is grabbing the data and
 doing some kind of work on it. Whether that be doing math with it, or changing
 it, or adorning it, or whatever it may be. The processing and the persistance
-of the data can be intercahngeable in order. Sometimes you may want to do the
+of the data can be interchangeable in order. Sometimes you may want to do the
 processing before the storage or even do the storage before and after the
 processing. In which case a message queue probably isn't the right tool for a
 middle man, but it definitely is for between the ingestion of the data and
@@ -94,12 +96,12 @@ front where it can be viewed and/or consumed by users. This part may or may not
 need a message queue to handle the transfer of data. If we're talking about
 some kind of a live system that is constantly updating, a message queue would
 probably be a good solution. However, if the data needed to be completely
-aggragated before it could be consumed, a message queue probably wouldn't be
+aggregated before it could be consumed, a message queue probably wouldn't be
 the best option.</p>
 
  <p>The moral of the story is that cloud computing, and it's message queues, allow
-big systems to be broken down and moularized in such a way that the individual
-pieces can work indepentently of each other. This independence can be
+big systems to be broken down and modularized in such a way that the individual
+pieces can work independently of each other. This independence can be
 beautifully combined with our final topic. Scalability.</p>
 
  <p>Scalability in the cloud is amazing. The cloud systems allow for businesses to
@@ -114,7 +116,7 @@ money, energy, and space.</p>
  <p>Obviously, the cloud isn't a magical thing that is actually in the clouds or
 managed by fairies. There are still system administrators and technicians that
 are working on machines to keep them alive. The only difference is that these
-personel are out of sight and out of mind for the businesses that are using
+personnel are out of sight and out of mind for the businesses that are using
 these cloud services. As far as we know, the cloud might as well be in the
 clouds and managed by fairies. That's what makes cloud computing seem so
 magical.</p>
