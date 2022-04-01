@@ -3,3 +3,122 @@
 <hr>
 <h3>Cloud Computing</h3>
 <hr>
+
+
+<p>Way back in the ancient times, before cloud computing was a thing, business IT
+solutions typically included rooms full of physical servers with one or more
+"System Administrators" working to manage them. These servers had to be
+manually configured with their hardware and software resources according to
+their job, whether they be managing the database system or the computing
+power or the development environments or any othe myriad other systems a
+business might need. These systems were typically all or nothing. As soon as
+resources for one machine aren't enough, the system administrator would have to
+set up an entire new machine and then that machine would only be using a small
+amount of its resources until the demand grew enough for the whole new machine
+to be worth it. These systems were also prone to be unreliable. If a server
+went down, the businesses server would go down until the server was fixed or
+replaced. Some companies might have enough resources to add some redundancy to
+the system in times like these, but not always. These are just a sample of a few
+of the problems and weaknesses of the way computing used to work. Luckily for
+us, we can now take advantage of the cloud!</p>
+
+  <p>As of 2021, the cloud computing market was worth about $250 billion dollars. It
+has been growing at a rapid pace and is expected to continue growing. The
+reasons for the popularity of the cloud are pretty clear, and pretty awesome...
+Remember the problems we were talking about earlier? Well cloud computing
+solves quite a few of them. Microsofts Azure described the cloud, much more
+beautifully than I can, on their website... </p>
+
+  <p>"Simply put, cloud computing is the delivery of computing services—including
+servers, storage, databases, networking, software, analytics, and
+intelligence—over the Internet (“the cloud”) to offer faster innovation,
+flexible resources, and economies of scale. You typically pay only for cloud
+services you use, helping you lower your operating costs, run your
+infrastructure more efficiently, and scale as your business needs change."</p>
+ <h5>- https://azure.microsoft.com/en-us/overview/what-is-cloud-computing/#benefits</h5>
+
+ <p>Using the cloud means companies no longer have to have a team of administrators
+to manager their servers. They no longer have to pay for computing resources
+that they aren't using during downtime, or worry about running out of computing
+power or storage during high traffic times. They no longer need to be worried
+about their systems going down or their data getting lost... They actually
+probably are still worried about these things, but less so than before :) In
+short, the cloud provides a lot of convenience in ensuring redundancy,
+availability, and scalability for software systems.</p>
+
+ <p>I would now like to hone in on one of the specific aspects of cloud computing
+that I learned about recently and found to be really amazing... Message Queues.
+Amazons AWS described Message Queues like this, "A message queue is a form of
+asynchronous service-to-service communication used in serverless and
+microservices architectures. Messages are stored on the queue until they are
+processed and deleted. Each message is processed only once, by a single
+consumer. Message queues can be used to decouple heavyweight processing, to
+buffer or batch work, and to smooth spiky workloads."</p>
+ <h5> - https://aws.amazon.com/message-queue/</h5>
+
+ <p>Message queue's allow for one of the best parts about cloud computing:
+Modularization. Breaking a big system down into a bunch of smaller systems,
+that split the work apart into chunks, makes the system as a whole much easier
+to "develop, deploy, and maintain". This distribution of the work can lead to
+improved "performance, reliability, and scalability". They accomplish all of
+this by acting as a kind of middle man between different applications.</p>
+
+ <p>A common pattern with online applications can be broken down into 4 seperate
+sections. Ingest, Persist, Process, Serve. Each of these sections could be
+seperated by a message queue.</p>
+
+ <p>The "Ingest" section could be described as the part that is outward facing to
+users. User interactions with the front facing system would be pushed onto a
+message queue where they would wait until the next system is ready to grab
+them.</p>
+
+ <p>The next system is the part that handles "Persistance". This system would be
+grabbing messages off the message queue as fast as it wanted and storing them
+in a more permanent way, such as a database or file system. This part is
+essential not only for future use of the data, if necessary, but also for
+additional redundancy. Message queues aren't meant to be a long term storage
+solution.</p>
+
+ <p>The next system in the line is "Processing". Processing, is grabbing the data and
+doing some kind of work on it. Whether that be doing math with it, or changing
+it, or adorning it, or whatever it may be. The processing and the persistance
+of the data can be intercahngeable in order. Sometimes you may want to do the
+processing before the storage or even do the storage before and after the
+processing. In which case a message queue probably isn't the right tool for a
+middle man, but it definitely is for between the ingestion of the data and
+whatever step comes next.</p>
+
+ <p>The last step in the pattern is "Service". This is the part that includes
+sending the data back from the depths of the computational dungeons up to the
+front where it can be viewed and/or consumed by users. This part may or may not
+need a message queue to handle the transfer of data. If we're talking about
+some kind of a live system that is constantly updating, a message queue would
+probably be a good solution. However, if the data needed to be completely
+aggragated before it could be consumed, a message queue probably wouldn't be
+the best option.</p>
+
+ <p>The moral of the story is that cloud computing, and it's message queues, allow
+big systems to be broken down and moularized in such a way that the individual
+pieces can work indepentently of each other. This independence can be
+beautifully combined with our final topic. Scalability.</p>
+
+ <p>Scalability in the cloud is amazing. The cloud systems allow for businesses to
+dynamically change the amount of computational resources they are paying for as
+they are using them. Each individual part of the system can be spun up into
+more instances to handle more work during heavy load times or less instances
+during light load. Disk space and availability can shrink and grow as they need
+to over time. Thereby allowing the business to only pay for what they need at
+the time instead of having extra resources at all times that are wasting
+money, energy, and space.</p>
+
+ <p>Obviously, the cloud isn't a magical thing that is actually in the clouds or
+managed by fairies. There are still system administrators and technicians that
+are working on machines to keep them alive. The only difference is that these
+personel are out of sight and out of mind for the businesses that are using
+these cloud services. As far as we know, the cloud might as well be in the
+clouds and managed by fairies. That's what makes cloud computing seem so
+magical.</p>
+
+
+
+
